@@ -75,7 +75,7 @@ body {
 }
 
 .navbar.menu-open .menu-toggle {
-    display: none;
+    display: block;
 }
 
 .hero-content {
@@ -654,7 +654,8 @@ footer {
 
 @media (max-width: 900px) {
     .navbar {
-        flex-wrap: wrap;
+         position: relative;
+        flex-wrap: nowrap;
     }
 
     .menu-toggle {
@@ -662,12 +663,16 @@ footer {
     }
 
     .nav-links {
-        width: 100%;
+          position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;        width: 100%;
         display: none;
         flex-direction: column;
         gap: 0;
         padding: 8px 0 12px;
         background: #d0555a;
+        z-index: 10;
     }
 
     .navbar.menu-open .nav-links {
